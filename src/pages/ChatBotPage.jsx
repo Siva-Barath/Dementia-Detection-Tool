@@ -47,7 +47,7 @@ Please respond to the following query with these guidelines in mind.`
     setIsLoading(true)
 
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyDipl5U6MPqYzqazaqhO9y0LkKj93HtadM`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${import.meta.env.VITE_GEMINI_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

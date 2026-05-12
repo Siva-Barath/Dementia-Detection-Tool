@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './AIInsights.css'
 
-const GEMINI_KEY = 'AIzaSyCy3s6h0J5Hq8T7W3c3Bv3Zy7kXy2BvQ1Wk'
+const GEMINI_KEY = import.meta.env.VITE_GEMINI_KEY
 
 function getLabel(score, max) {
   const p = (score / max) * 100
