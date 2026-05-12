@@ -1,0 +1,41 @@
+.test-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.test-container {
+  text-align: center;
+  max-width: 600px;
+}
+
+.test-container h1 {
+  font-size: 2.5rem;
+  color: #8B0000;
+  margin-bottom: 1rem;
+}
+
+.test-container p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #8B0000;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border: 2px solid #8B0000;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.back-link:hover {
+  background: #8B0000;
+  color: #fff;
+}

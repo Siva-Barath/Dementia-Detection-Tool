@@ -1,0 +1,254 @@
+/* Shared page styles — used by all new pages */
+.page-wrapper {
+  min-height: 100vh;
+  background: var(--bg-page);
+  padding: 80px 20px 60px;
+}
+
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-header { text-align: center; margin-bottom: 8px; }
+.page-header h1 { font-size: 1.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
+.page-header p  { color: var(--text-muted); font-size: 0.97rem; }
+
+.card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.date-badge {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-card2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+/* Wellness grid */
+.wellness-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+.wellness-right { display: flex; flex-direction: column; gap: 16px; }
+
+/* Form fields */
+.field-group { margin-bottom: 20px; }
+.field-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+/* Mood buttons */
+.mood-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.mood-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: var(--bg-card2);
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  min-width: 60px;
+}
+.mood-btn:hover { border-color: #8B0000; transform: translateY(-2px); }
+.mood-btn.selected { border-color: #8B0000; background: #8B000015; }
+
+.mood-emoji { font-size: 1.6rem; }
+.mood-label { font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); }
+
+/* Sleep buttons */
+.sleep-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.sleep-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  background: var(--bg-card2);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+.sleep-btn:hover { border-color: #8B0000; }
+.sleep-btn.selected { border-color: #8B0000; background: #8B000015; color: #8B0000; }
+
+/* Option buttons */
+.option-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.option-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  background: var(--bg-card2);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+.option-btn:hover { border-color: #8B0000; }
+.option-btn.selected { border-color: #8B0000; background: #8B000015; color: #8B0000; }
+.option-btn.stress-high.selected   { border-color: #dc3545; background: #dc354515; color: #dc3545; }
+.option-btn.stress-medium.selected { border-color: #ffc107; background: #ffc10715; color: #856404; }
+.option-btn.stress-low.selected    { border-color: #28a745; background: #28a74515; color: #28a745; }
+
+/* Note textarea */
+.wellness-note {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--bg-input);
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+.wellness-note:focus { outline: none; border-color: #8B0000; }
+
+/* Save button */
+.save-btn-primary {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #8B0000, #a00000);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.97rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+  margin-top: 4px;
+}
+.save-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(139,0,0,0.3); }
+
+.save-notice {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Score card */
+.score-card { text-align: center; }
+
+.big-score {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.big-score span { font-size: 1.2rem; color: var(--text-muted); font-weight: 400; }
+
+.score-label-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* 7-day average */
+.avg-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 16px; }
+.avg-score { font-size: 2.2rem; font-weight: 900; }
+.avg-label { font-size: 0.85rem; color: var(--text-muted); }
+
+.mini-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 60px;
+}
+
+.mini-bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.mini-bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  min-height: 4px;
+  transition: height 0.4s ease;
+}
+
+.mini-date { font-size: 0.65rem; color: var(--text-muted); }
+
+/* Tips */
+.tips-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.tips-list li { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; padding: 8px 12px; background: var(--bg-card2); border-radius: 8px; border-left: 3px solid #8B0000; }
+
+/* History */
+.history-section { margin-top: 0; }
+
+.wellness-history { display: flex; flex-direction: column; gap: 8px; }
+
+.history-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  background: var(--bg-card2);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.h-date  { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); min-width: 70px; }
+.h-mood  { font-size: 1.2rem; }
+.h-sleep { font-size: 0.82rem; color: var(--text-secondary); }
+.h-stress{ font-size: 0.82rem; font-weight: 600; }
+.h-score { font-size: 0.88rem; font-weight: 700; margin-left: auto; }
+
+@media (max-width: 768px) {
+  .wellness-grid { grid-template-columns: 1fr; }
+  .mood-btn { min-width: 50px; padding: 8px 10px; }
+}

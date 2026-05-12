@@ -1,0 +1,214 @@
+.ai-insights {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  margin-bottom: 20px;
+}
+
+.empty-insights {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.no-data-msg {
+  color: #888;
+  font-size: 0.95rem;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.ai-insights-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ai-icon { font-size: 1.5rem; }
+
+.ai-insights-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  flex: 1;
+  margin: 0;
+}
+
+.refresh-btn {
+  background: #f0f0f0;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.refresh-btn:hover { background: #8B0000; color: #fff; transform: rotate(180deg); }
+.refresh-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Risk Meter */
+.risk-meter {
+  border-radius: 12px;
+  padding: 14px 18px;
+  border: 1.5px solid;
+  margin-bottom: 18px;
+}
+
+.risk-meter-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.risk-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.risk-bar-track {
+  height: 8px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.risk-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* Domain Tags */
+.domain-tags {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.domain-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #e9ecef;
+}
+
+.domain-tag-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #555;
+  flex: 1;
+}
+
+.domain-tag-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tag-excellent { background: #d4edda; color: #155724; }
+.tag-good      { background: #cce5ff; color: #004085; }
+.tag-average   { background: #fff3cd; color: #856404; }
+.tag-poor      { background: #f8d7da; color: #721c24; }
+
+.domain-tag-score {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Loading */
+.insight-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.insight-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e0e0e0;
+  border-top-color: #8B0000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Insight Body */
+.insight-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.insight-block {
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.insight-block h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.insight-block ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.insight-block ul li {
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 3px;
+}
+
+.insight-block p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.summary-block  { background: #f0f4ff; border-left: 4px solid #4a6cf7; }
+.strengths-block { background: #f0fdf4; border-left: 4px solid #28a745; }
+.weaknesses-block { background: #fffbeb; border-left: 4px solid #ffc107; }
+.recs-block     { background: #fdf4ff; border-left: 4px solid #8B0000; }
+.prediction-block { background: #f0f9ff; border-left: 4px solid #17a2b8; }
+
+.insight-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .domain-tags { grid-template-columns: 1fr; }
+  .insight-columns { grid-template-columns: 1fr; }
+}
